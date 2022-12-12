@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "fdc209a1-8d2f-40bb-98d3-155bf07b928b",
+		"name": "code_challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Data",
+			"item": [
+				{
+					"name": "Get All Data weather",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/weather"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Data yield",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/yield"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Data of weather statistic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/weather/stats",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"weather",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "1986",
+									"disabled": true
+								},
+								{
+									"key": "station_id",
+									"value": "USC00110072",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Add/update Data",
+			"item": [
+				{
+					"name": "Add New Data weather",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "txtfile",
+									"type": "file",
+									"src": "/D:/My Project/CodingExercise-main/app/demo.txt",
+									"disabled": true
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/weather"
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Data yield",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "txtfile",
+									"type": "file",
+									"src": "/D:/My Project/CodingExercise-main/app/demo1.txt"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/yield"
+					},
+					"response": []
+				},
+				{
+					"name": "add weather statistic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/weather/stats"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
